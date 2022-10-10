@@ -19,7 +19,22 @@ dependencies {
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.1.SP1.RELEASE'
 
 }
+// https://stackoverflow.com/questions/72429685/gradle-publishtomavenlocal-task-not-found-please-add-the-maven-publish-or
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.company'
+            artifactId = 'sample'
+            version = "0.9-SNAPSHOT"
+            from components.java
 
+            pom {
+                description = 'A description of my library'
+
+            }
+        }
+    }
+}
 test {
     useJUnitPlatform()
 }
