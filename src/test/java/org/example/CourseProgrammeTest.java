@@ -27,30 +27,34 @@ class CourseProgrammeTest {
     @Test
     void getListOfModules() {
         CourseProgramme courseProgramme = new CourseProgramme();
-        courseProgramme.setListOfModules(null);
-        assertTrue(courseProgramme.getListOfModules().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        courseProgramme.setListOfModules(modules);
+        assertTrue(courseProgramme.getListOfModules().equals(modules));
     }
 
     @Test
     void setListOfModules() {
         CourseProgramme courseProgramme = new CourseProgramme();
-        courseProgramme.setListOfModules(null);
-        assertTrue(courseProgramme.getListOfModules().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        courseProgramme.setListOfModules(modules);
+        assertTrue(courseProgramme.getListOfModules().equals(modules));
     }
 
     @Test
     void getListOfStudents() {
         CourseProgramme courseProgramme = new CourseProgramme();
-        courseProgramme.setListOfStudents(null);
-        assertTrue(courseProgramme.getListOfStudents().equals(null));
+        ArrayList<Student> students = new ArrayList<Student>();
+        courseProgramme.setListOfStudents(students);
+        assertTrue(courseProgramme.getListOfStudents().equals(students));
     }
 
 
     @Test
     void setListOfStudents() {
         CourseProgramme courseProgramme = new CourseProgramme();
-        courseProgramme.setListOfStudents(null);
-        assertTrue(courseProgramme.getListOfStudents().equals(null));
+        ArrayList<Student> students = new ArrayList<Student>();
+        courseProgramme.setListOfStudents(students);
+        assertTrue(courseProgramme.getListOfStudents().equals(students));;
     }
 
     @Test

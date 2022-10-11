@@ -1,7 +1,11 @@
 package org.example;
 
+import org.checkerframework.checker.units.qual.C;
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,14 +29,16 @@ class StudentTest {
     void getName() {
         Student student = new Student();
         student.setName("Robert Lynx");
-        assertTrue(student.getName().equals("Robert Lynx 12345678"));
+        student.setAge(20);
+        assertTrue(student.getName().equals("Robert Lynx 20"));
     }
 
     @Test
     void setName() {
         Student student = new Student();
         student.setName("Robert Lynx");
-        assertTrue(student.getName().equals("Robert Lynx 12345678"));
+        student.setAge(20);
+        assertTrue(student.getName().equals("Robert Lynx 20"));
     }
 
     @Test
@@ -82,28 +88,32 @@ class StudentTest {
     @Test
     void getCourse() {
         Student student = new Student();
-        student.setCourse(null);
-        assertTrue(student.getCourse().equals(null));
+        CourseProgramme course = new CourseProgramme();
+        student.setCourse(course);
+        assertTrue(student.getCourse().equals(course));
     }
 
     @Test
     void setCourse() {
         Student student = new Student();
-        student.setCourse(null);
-        assertTrue(student.getCourse().equals(null));
+        CourseProgramme course = new CourseProgramme();
+        student.setCourse(course);
+        assertTrue(student.getCourse().equals(course));
     }
 
     @Test
     void getModules() {
         Student student = new Student();
-        student.setModules(null);
-        assertTrue(student.getModules().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        student.setModules(modules);
+        assertTrue(student.getModules().equals(modules));
     }
 
     @Test
     void setModules() {
         Student student = new Student();
-        student.setModules(null);
-        assertTrue(student.getModules().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        student.setModules(modules);
+        assertTrue(student.getModules().equals(modules));
     }
 }

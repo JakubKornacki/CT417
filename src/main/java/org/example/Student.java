@@ -38,7 +38,7 @@ public class Student {
     }
 
     public String getName() {
-        return name;
+        return name + " " + age;
     }
 
     public void setName(String name) {
@@ -62,7 +62,7 @@ public class Student {
     }
 
     public String getUserName() {
-        return userName + " " + age;
+        return userName;
     }
 
     public void setUserName(String userName) {

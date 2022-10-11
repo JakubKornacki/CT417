@@ -2,6 +2,7 @@ package org.example;
 
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -70,27 +71,31 @@ class LecturerTest {
     void getUserName() {
         Lecturer lecturer = new Lecturer();
         lecturer.setUserName("Adam Dempsey");
-        assertTrue(lecturer.getUserName().equals("Adam Dempsey 1323232"));
+        lecturer.setAge(17);
+        assertTrue(lecturer.getUserName().equals("Adam Dempsey 17"));
     }
 
     @Test
     void setUserName() {
         Lecturer lecturer = new Lecturer();
         lecturer.setUserName("Adam Dempsey");
-        assertTrue(lecturer.getUserName().equals("Adam Dempsey 1323232"));
+        lecturer.setAge(17);
+        assertTrue(lecturer.getUserName().equals("Adam Dempsey 17"));
     }
 
     @Test
     void getModulesThought() {
         Lecturer lecturer = new Lecturer();
-        lecturer.setModulesThought(null);
-        assertTrue(lecturer.getModulesThought().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        lecturer.setModulesThought(modules);
+        assertTrue(lecturer.getModulesThought().equals(modules));
     }
 
     @Test
     void setModulesThought() {
         Lecturer lecturer = new Lecturer();
-        lecturer.setModulesThought(null);
-        assertTrue(lecturer.getModulesThought().equals(null));
+        ArrayList<Module> modules = new ArrayList<Module>();
+        lecturer.setModulesThought(modules);
+        assertTrue(lecturer.getModulesThought().equals(modules));
     }
 }
